@@ -4,6 +4,7 @@ secrets:
 
 services:
   goimapnotify:
+    image: ghcr.io/n0rthernl1ghts/goimapnotify:latest
     init: true
     build: 
       context: .
