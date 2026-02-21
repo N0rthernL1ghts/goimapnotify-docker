@@ -1,0 +1,16 @@
+### VisualStudioCode ###
+.vscode/
+
+# User Data dirs
+config/
+data/
+secrets/
+
+# Build artifacts
+build/
+
+# Override files
+compose.override.yaml
+
+# Version control
+.git/

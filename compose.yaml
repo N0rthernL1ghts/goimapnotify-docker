@@ -1,0 +1,13 @@
+secrets:
+  email_imap_password:
+    file: ./secrets/email_imap_password.txt
+
+services:
+  goimapnotify:
+    init: true
+    build: 
+      context: .
+    volumes:
+      - ./config/goimapnotify/config.yaml:/etc/imapnotify/config.yaml
+    secrets:
+      - email_imap_password
