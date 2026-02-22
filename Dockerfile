@@ -17,10 +17,11 @@ RUN set -eux \
 
 FROM scratch AS rootfs
 
-COPY --chmod=0777 --from=builder ["/app/goimapnotify/goimapnotify", "/usr/local/bin/goimapnotify"]
+COPY --chmod=0777 --from=builder ["/app/goimapnotify/goimapnotify", "/usr/local/bin/"]
 COPY --chmod=0777 --from=builder ["/app/goimapnotify/LICENSE", "/usr/local/share/doc/goimapnotify/LICENSE"]
-COPY --chmod=0777 ["./src/goimapnotify-entrypoint.sh", "/goimapnotify-entrypoint.sh"]
 COPY --chmod=0777 --from=docker:29-cli ["/usr/local/bin/docker", "/usr/local/bin/docker"]
+COPY --chmod=0777 --from=docker:29-cli ["/usr/local/libexec/docker/cli-plugins/docker-compose", "/usr/local/libexec/docker/cli-plugins/"]
+COPY --chmod=0777 ["./src/goimapnotify-entrypoint.sh", "/goimapnotify-entrypoint.sh"]
 
 
 
