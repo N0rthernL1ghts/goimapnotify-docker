@@ -2,7 +2,7 @@
 
 main() {
 
-    local flags=('--conf' '/etc/imapnotify/config.yaml')
+    local flags=('--conf' '/etc/goimapnotify/config.yaml')
 
     if [[ "${IMAPNOTIFY_LIST_ONLY:-}" == "true" ]]; then
         exec /usr/local/bin/goimapnotify "${flags[@]}" -list

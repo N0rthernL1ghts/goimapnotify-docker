@@ -9,6 +9,6 @@ services:
     build: 
       context: .
     volumes:
-      - ./config/goimapnotify/config.yaml:/etc/imapnotify/config.yaml
+      - ./config/goimapnotify/config.yaml:/etc/goimapnotify/config.yaml
     secrets:
       - email_imap_password
